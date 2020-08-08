@@ -55,7 +55,7 @@ public:
 空间复杂度：o(n)
 
 ```cpp
-// 中序遍历的递归形式
+// 中序遍历的递归方法
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
@@ -74,3 +74,36 @@ public:
     }
 };
 ```
+
+```cpp
+// 中序遍历的迭代方法
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> ans;
+        stack<TreeNode*> s;
+        if (root != NULL)
+            s.push(root);
+
+        while (!s.empty())
+        {
+            TreeNode *now = s.top();
+            if (now->left == NULL)
+            {
+                ans.push_back(now->val);
+                s.pop();
+                if (now->right != NULL)
+                    s.push(now->right);
+            }
+            else
+            {
+                s.push(now->left);
+                now->left = NULL;
+            }
+        }
+
+        return ans;
+    }
+};
+```
+
