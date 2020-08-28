@@ -1,0 +1,677 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>130 深搜深搜还是深搜 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="LeetCode-129.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="http://codebiluo.cn/">
+            
+                    
+                    博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../1-100/README.md">
+            
+                <span>
+            
+                    
+                    1-100题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../1-100/LeetCode-1.html">
+            
+                <a href="../1-100/LeetCode-1.html">
+            
+                    
+                    1 利用哈希表进行查找加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../1-100/LeetCode-2.html">
+            
+                <a href="../1-100/LeetCode-2.html">
+            
+                    
+                    2 需要考虑周全的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../1-100/LeetCode-3.html">
+            
+                <a href="../1-100/LeetCode-3.html">
+            
+                    
+                    3 官方题解的优化滑动窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../1-100/LeetCode-4.html">
+            
+                <a href="../1-100/LeetCode-4.html">
+            
+                    
+                    4 超多方法;找到多个变量之间的关系来减少变量个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../1-100/LeetCode-5.html">
+            
+                <a href="../1-100/LeetCode-5.html">
+            
+                    
+                    5 我眼中的困难题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../1-100/LeetCode-6.html">
+            
+                <a href="../1-100/LeetCode-6.html">
+            
+                    
+                    6 找规律的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../1-100/LeetCode-7.html">
+            
+                <a href="../1-100/LeetCode-7.html">
+            
+                    
+                    7 充分考虑int的溢出情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../1-100/LeetCode-8.html">
+            
+                <a href="../1-100/LeetCode-8.html">
+            
+                    
+                    8 需要充分考虑的也太多了
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../1-100/LeetCode-51-52.html">
+            
+                <a href="../1-100/LeetCode-51-52.html">
+            
+                    
+                    51-52 经典回溯问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../1-100/LeetCode-92.html">
+            
+                <a href="../1-100/LeetCode-92.html">
+            
+                    
+                    92 哨位节点的重要性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../1-100/LeetCode-94.html">
+            
+                <a href="../1-100/LeetCode-94.html">
+            
+                    
+                    94 莫里斯中序遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../1-100/LeetCode-95.html">
+            
+                <a href="../1-100/LeetCode-95.html">
+            
+                    
+                    95 合理利用返回值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../1-100/LeetCode-97.html">
+            
+                <a href="../1-100/LeetCode-97.html">
+            
+                    
+                    97 指数型增长的暴力果然不可行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../1-100/LeetCode-99.html">
+            
+                <a href="../1-100/LeetCode-99.html">
+            
+                    
+                    99 二叉搜索树多往中序遍历去想
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../1-100/LeetCode-100.html">
+            
+                <a href="../1-100/LeetCode-100.html">
+            
+                    
+                    100 留心小问题即可
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="README.md">
+            
+                <span>
+            
+                    
+                    101-200题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="LeetCode-102.html">
+            
+                <a href="LeetCode-102.html">
+            
+                    
+                    102 层次遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="LeetCode-103.html">
+            
+                <a href="LeetCode-103.html">
+            
+                    
+                    103 双端队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="LeetCode-108-109.html">
+            
+                <a href="LeetCode-108-109.html">
+            
+                    
+                    108-109 对链表的二分方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="LeetCode-114.html">
+            
+                <a href="LeetCode-114.html">
+            
+                    
+                    114 将二叉树展开为链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="LeetCode-115.html">
+            
+                <a href="LeetCode-115.html">
+            
+                    
+                    115 真的没想出来状态转移方程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="LeetCode-116-117.html">
+            
+                <a href="LeetCode-116-117.html">
+            
+                    
+                    116-117 巧妙的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="LeetCode-118-119.html">
+            
+                <a href="LeetCode-118-119.html">
+            
+                    
+                    118-119 有关杨辉三角形的回忆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="LeetCode-120.html">
+            
+                <a href="LeetCode-120.html">
+            
+                    
+                    120 三角形中的最短路径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="LeetCode-124.html">
+            
+                <a href="LeetCode-124.html">
+            
+                    
+                    124 非常好的一道递归题目！
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="LeetCode-125.html">
+            
+                <a href="LeetCode-125.html">
+            
+                    
+                    125 简单的双指针问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="LeetCode-129.html">
+            
+                <a href="LeetCode-129.html">
+            
+                    
+                    129 简单的深搜问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.12" data-path="LeetCode-130.html">
+            
+                <a href="LeetCode-130.html">
+            
+                    
+                    130 深搜深搜还是深搜
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >130 深搜深搜还是深搜</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5F00;&#x5B66;&#x8BFE;&#x7A0B;&#x538B;&#x529B;&#x662F;&#x771F;&#x6EF4;&#x5927;&#xFF0C;&#x4E09;&#x5468;&#x4E86;&#xFF0C;&#x4E00;&#x9053;&#x9898;&#x90FD;&#x6CA1;&#x5237;&#xFF0C;&#x4ECA;&#x5929;&#x5B9E;&#x5728;&#x4E0D;&#x60F3;&#x770B;&#x7F51;&#x8BFE;&#xFF0C;&#x6765;&#x4E00;&#x9053;&#x4E4B;&#x524D;&#x6CA1;&#x601D;&#x8DEF;&#x7684;&#x9898;&#x3002;</p>
+<h5 id="&#x4E00;&#x3001;&#x601D;&#x8DEF;">&#x4E00;&#x3001;&#x601D;&#x8DEF;</h5>
+<p>&#x770B;&#x5230;&#x8FD9;&#x9053;&#x9898;&#xFF0C;&#x4F1A;&#x60F3;&#x5230;&#x8FDE;&#x901A;&#x5757;&#x95EE;&#x9898;&#x3002;&#x5904;&#x7406;&#x8FDE;&#x901A;&#x5757;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x662F;&#x7528;dfs&#x6216;bfs&#xFF0C;&#x4EE5;&#x5F53;&#x524D;&#x65B9;&#x5757;&#x4E3A;&#x8D77;&#x70B9;&#xFF0C;&#x6269;&#x5C55;&#x51FA;&#x6240;&#x6709;&#x7684;&#x8FDE;&#x901A;&#x65B9;&#x5757;&#x3002;&#x8FD9;&#x9053;&#x9898;&#x4E5F;&#x662F;&#x8FD9;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x8FD9;&#x9053;&#x9898;&#x6D89;&#x53CA;&#x5230;&#x5C06;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;O&#x586B;&#x5145;&#x4E3A;X&#xFF0C;&#x7C7B;&#x4F3C;&#x6D82;&#x8272;&#x3002;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x662F;<strong>&#x627E;&#x51FA;&#x9700;&#x8981;&#x6D82;&#x8272;&#x7684;&#x8FDE;&#x901A;&#x5757;</strong>&#xFF1B;&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x662F;<strong>&#x627E;&#x51FA;&#x4E0D;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x5373;&#x4E0D;&#x9700;&#x6D82;&#x8272;&#x7684;&#x65B9;&#x5757;&#x6240;&#x5728;&#x7684;&#x8FDE;&#x901A;&#x5757;</strong>&#x3002;&#x660E;&#x663E;&#x53EF;&#x77E5;&#xFF0C;&#x524D;&#x8005;&#x9700;&#x8981;&#x904D;&#x5386;&#x6240;&#x6709;&#x65B9;&#x5757;&#xFF0C;&#x627E;&#x5230;&#x5404;&#x81EA;&#x7684;&#x8FDE;&#x901A;&#x5757;&#xFF08;&#x5B9E;&#x9645;&#x4E0D;&#x9700;&#x8981;&#xFF0C;&#x5F53;&#x65B9;&#x5757;&#x5DF2;&#x7ECF;&#x88AB;&#x8BBF;&#x95EE;&#x8FC7;&#x6216;&#x8005;&#x662F;&#x2018;X&#x2019;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5F80;&#x540E;&#x8D70;&#xFF09;&#xFF1B;&#x540E;&#x8005;&#x53EA;&#x9700;&#x8981;&#x904D;&#x5386;&#x56DB;&#x5468;&#x7684;&#x65B9;&#x5757;&#x5373;&#x53EF;&#x3002;</p>
+<h5 id="&#x4E8C;&#x3001;&#x4EE3;&#x7801;">&#x4E8C;&#x3001;&#x4EE3;&#x7801;</h5>
+<p>&#x8FD9;&#x91CC;&#x7ED9;&#x51FA;&#x601D;&#x8DEF;&#x4E2D;&#x7B2C;&#x4E8C;&#x79CD;&#x8F83;&#x4F18;&#x65B9;&#x6CD5;&#x7684;&#x4EE3;&#x7801;</p>
+<pre><code>class Solution {
+public:
+    void dfs(vector&lt;vector&lt;char&gt;&gt;&amp; board , int x , int y)
+    {
+        int dictions[4][2] = {{0,1},{0,-1},{1,0},{-1,0}};
+        board[x][y] = &apos;Y&apos;;
+        for (int i = 0 ; i &lt; 4 ; ++i)
+        {
+            int newX = x+dictions[i][0];
+            int newY = y+dictions[i][1];
+            if (0 &lt;= newX &amp;&amp; newX &lt; board.size() &amp;&amp; 0 &lt;= newY &amp;&amp; newY &lt; board[0].size() 
+            &amp;&amp; board[newX][newY] == &apos;O&apos;)
+                dfs(board , newX , newY);
+        }
+    }
+
+    void solve(vector&lt;vector&lt;char&gt;&gt;&amp; board) {
+        for (int i = 0 ; i &lt; board.size() ; ++i)
+        {
+            for (int j = 0 ; j &lt; board[0].size() ; ++j)
+            {
+                if ((i == 0 || i == board.size()-1 || j == 0 || j == board[0].size()-1) &amp;&amp;
+                board[i][j] == &apos;O&apos;)
+                    dfs(board , i , j);
+            }
+        }
+
+        for (int i = 0 ; i &lt; board.size() ; ++i)
+        {
+            for (int j = 0 ; j &lt; board[0].size() ; ++j)
+            {
+                if (board[i][j] == &apos;O&apos;)
+                    board[i][j] = &apos;X&apos;;
+                if (board[i][j] == &apos;Y&apos;)
+                    board[i][j] = &apos;O&apos;;
+            }
+        }
+    }
+};
+</code></pre><p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;<strong>O(n)</strong>&#xFF08;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x904D;&#x5386;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x65B9;&#x5757;&#x57FA;&#x672C;&#x4E0A;&#x53EA;&#x4F1A;&#x88AB;&#x8BBF;&#x95EE;&#x4E00;&#x6B21;&#xFF09;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="LeetCode-129.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 129 简单的深搜问题">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"130 深搜深搜还是深搜","level":"2.1.12","depth":2,"previous":{"title":"129 简单的深搜问题","level":"2.1.11","depth":2,"path":"101-200/LeetCode-129.md","ref":"101-200/LeetCode-129.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"101-200/LeetCode-130.md","mtime":"2020-03-20T09:37:00.036Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-08T12:52:15.517Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
