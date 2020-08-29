@@ -13,7 +13,6 @@ class Solution {
 public:
     void dfs(vector<vector<char>>& board , int x , int y)
     {
-        int dictions[4][2] = {{0,1},{0,-1},{1,0},{-1,0}};
         board[x][y] = 'Y';
         for (int i = 0 ; i < 4 ; ++i)
         {
